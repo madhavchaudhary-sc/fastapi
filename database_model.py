@@ -1,7 +1,8 @@
 
 from sqlalchemy import Column,Integer ,String,Float
-from sqlalchemy.ext.declarative import declarative_base
-Base =declarative_base()     # this function will create base for you for inhert
+# from sqlalchemy.ext.declarative import declarative_base
+# Base =declarative_base()     # this function will create base for you for inhert
+from database import Base
 
 class Product(Base):       # base will make let know Db is link to Product table
 
@@ -12,3 +13,15 @@ class Product(Base):       # base will make let know Db is link to Product table
     description= Column(String)
     price= Column(Float)
     quantity = Column(Integer)
+
+
+
+#! Ye correct relationship hai.
+# database.py
+#      │
+#      └── Base
+#           │
+#           ▼
+# database_model.py
+#           │
+#           └── Product

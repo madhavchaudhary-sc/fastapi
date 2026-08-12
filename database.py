@@ -8,7 +8,10 @@ from sqlalchemy.orm import sessionmaker ,declarative_base
 
 # username:password
 db_url = "postgresql://postgres:admin123@localhost:5432/fastapi_db"
+
 engine = create_engine(db_url)
+
+
 SessionLocal = sessionmaker(autocommit =False ,
                             autoflush = False, 
                             bind=engine) 
