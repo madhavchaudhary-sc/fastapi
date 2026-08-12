@@ -1,0 +1,38 @@
+# class Product:
+#     id: int
+#     name:str
+#     description: str
+#     price: float
+#     quantity : int
+
+
+
+
+#     def __init__(self, id: int, name: str, description: str, price: float, quantity: int):
+#         self.id = id
+#         self.name = name
+#         self.description = description
+#         self.price = price
+#         self.quantity = quantity    
+
+
+
+#! ab pydantic use karege for validation ye khud constru banayega
+
+from pydantic import BaseModel
+class Product(BaseModel):
+    id: int
+    name:str
+    description: str
+    price: float
+    quantity : int
+
+
+
+     #? no need of this
+    # def __init__(self, id: int, name: str, description: str, price: float, quantity: int):
+    #     self.id = id
+    #     self.name = name
+    #     self.description = description
+    #     self.price = price
+    #     self.quantity = quantity    
