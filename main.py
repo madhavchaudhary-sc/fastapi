@@ -66,7 +66,8 @@ app.add_middleware(
 
 
 # this will create table product in db (base database_model me inher ka kam kiya ab meta data class ka use krne me help karega)
-database_model.Base.metadata.create_all(bind=engine)
+#! testing ke liye ye line commented kyu ki ye sqlite db ko banane se phale he excute ho raha tha 
+# # database_model.Base.metadata.create_all(bind=engine)
 
 @app.get("/")               
 def greet():
@@ -116,7 +117,8 @@ def init_db():
           #product is objline no -61 &77 and .model_dump() -> into dictionary(acourse this will have key value but) & -> dic ko key value pair banane ke liye unpackage krege ** laga ke key value pair mile
    db.commit() 
 
-init_db()         
+#! testing ke liye ye line commented kyu ki ye sqlite db ko banane se phale he excute ho raha tha 
+# init_db()         
 
 #? ache se logic likh ke niche banaya 
 # @app.get("/products/{id}")              # dynamic banaya {}
