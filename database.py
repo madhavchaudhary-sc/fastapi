@@ -7,7 +7,16 @@ from sqlalchemy.orm import sessionmaker ,declarative_base
 
 
 # username:password
-db_url = "postgresql://postgres:admin123@localhost:5432/fastapi_db"
+# db_url = "postgresql://postgres:admin123@localhost:5432/fastapi_db"
+
+#FASTAPI AND postgre ka alag containe rbanae ke baad local jost naam hata ke ,kyu ki Compose mein service ka naam:postgres:
+db_url = "postgresql://postgres:admin123@postgres:5432/fastapi_db"
+
+# FastAPI container
+#       │
+#       │ postgres:5432
+#       ▼
+# PostgreSQL container
 
 engine = create_engine(db_url)
 
